@@ -8,6 +8,5 @@ const PictureCard = ({data}) => {
                 <img className="card-img" src= {e.url}  alt={e.description}/>
             </div>
         ))
-    )
-
+    )}
 export default PictureCard;
