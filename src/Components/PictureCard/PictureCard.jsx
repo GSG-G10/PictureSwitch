@@ -10,6 +10,4 @@ const PictureCard = ({data}) => {
         ))
     )
 
-}
-
 export default PictureCard;
