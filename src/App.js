@@ -5,14 +5,14 @@ import PictureCard from "./Components/PictureCard/PictureCard";
 import './App.css'
 class App extends Component {
   state = {
-    search: "cat",
+    search: "",
     data: "",
   };
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate = (prevProps, prevState) => {
     if (this.state.search !== prevState.search) {
       data(prevState.search).then((data) => this.setState({ data: data }));
     }
-  }
+  };
   componentDidMount = () => {
     data(this.state.search).then((data) => this.setState({ data: data }));
   };
