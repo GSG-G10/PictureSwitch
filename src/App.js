@@ -4,10 +4,10 @@ import Header from "./Components/Header/Header";
 import PictureCard from "./Components/PictureCard/PictureCard";
 class App extends Component {
   state = {
-    search: "cat",
+    search: "",
     data: "",
   };
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate =(prevProps, prevState) => {
     if (this.state.search !== prevState.search) {
       data(prevState.search).then((data) => this.setState({ data: data }));
     }
