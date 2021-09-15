@@ -4,19 +4,21 @@ import Header from "./Components/Header/Header";
 import PictureCard from "./Components/PictureCard/PictureCard";
 class App extends Component {
   state = {
-    search: "",
-    data: ''
+    search: "cat",
+    data: "",
   };
-
-  componentDidMount = () => {
-    const query = 'cat';
-    data(query).then(data => this.setState({ data: data }));
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.search !== prevState.search) {
+      data(prevState.search).then((data) => this.setState({ data: data }));
+    }
   }
+  componentDidMount = () => {
+    data(this.state.search).then((data) => this.setState({ data: data }));
+  };
 
   handleChange = (event) => {
     this.setState({ search: event.target.value });
   };
-  
 
   render() {
     if (!this.state.data) {
@@ -24,7 +26,7 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <Header handleChange= {this.handleChange} />
+        <Header handleChange={this.handleChange} />
         <main>
           <PictureCard data={this.state.data} />
         </main>

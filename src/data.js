@@ -8,7 +8,7 @@ const data = (query) => {
       data.map((elm) => ({
         id: elm.id,
         description: elm.alt_description,
-        url: elm.urls.raw,
+        url: elm.urls.regular,
       }))
     )
     .then((data) => data)
