@@ -1,5 +1,5 @@
 const data = (query) => {
-  fetch(
+  return fetch(
     `https://api.unsplash.com/search/photos?query=${query}&client_id=${process.env.REACT_APP_API_KEY}`
   )
     .then((res) => res.json())
