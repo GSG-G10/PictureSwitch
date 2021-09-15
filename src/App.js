@@ -1,3 +1,4 @@
+import PictureCard from "./Components/PictureCard/PictureCard";
 
 function App() {
   return (
