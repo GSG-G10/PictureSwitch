@@ -7,11 +7,11 @@ class App extends Component {
     search: "",
     data: "",
   };
-  componentDidUpdate =(prevProps, prevState) => {
+  componentDidUpdate = (prevProps, prevState) => {
     if (this.state.search !== prevState.search) {
       data(prevState.search).then((data) => this.setState({ data: data }));
     }
-  }
+  };
   componentDidMount = () => {
     data(this.state.search).then((data) => this.setState({ data: data }));
   };
