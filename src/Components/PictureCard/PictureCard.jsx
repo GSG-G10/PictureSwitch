@@ -2,7 +2,6 @@ import React from "react";
 import './PictureCard.css'
 
 const PictureCard = ({ data }) => {
-  console.log(data)
   if (data.length === 0) {
     return (
       <div className="picture-card">
