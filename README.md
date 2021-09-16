@@ -1,7 +1,7 @@
 # [PictureSwitch](https://pictureswitch.netlify.app/)
 
 ### Access to project
-> [Demo Link](https://pictureswitch.netlify.app/) - [Suggestions](https://github.com/GSG-G10/PictureSwitch/issues)
+> [Demo Link](https://6143100573bd76e6e4a04fc9--pictureswitch.netlify.app/) - [Suggestions](https://github.com/GSG-G10/PictureSwitch/issues)
 
 ### Team Members
 *  [Noor Abunamus](https://github.com/Noorin99)
