@@ -14,10 +14,10 @@ const fetchData = (link) => {
 };
 const data = (link) => {
   if (Boolean(link) === false) {
-    link = `https://api.unsplash.com/photos/?page=5&per_page=100&client_id=${process.env.REACT_APP_API_KEY}`;
+    link = `https://api.unsplash.com/photos/?page=5&per_page=10&client_id=${process.env.REACT_APP_API_KEY}`;
     return fetchData(link);
   } else {
-    link = `https://api.unsplash.com/search/photos?page=5&per_page=100&query=${link}&client_id=${process.env.REACT_APP_API_KEY}`;
+    link = `https://api.unsplash.com/search/photos?query=${link}&client_id=${process.env.REACT_APP_API_KEY}`;
     return fetchData(link);
   }
 };
